@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,13 +19,12 @@
 
             <ul>
                 <li><a href="#matches">Matches</a></li>
-                <li><a href="#booking">Book Ticket</a></li>
+                <li><a href="booking.html">Book Ticket</a></li>
                 <li><a href="#my-bookings">My Bookings</a></li>
                 <li><a href="#guidelines">Guidelines</a></li>
             </ul>
         </nav>
     </header>
-
 
     <!-- Hero Banner -->
     <section id="home">
@@ -39,10 +38,9 @@
 
         <a href="#matches">View Schedule</a>
 
-        <a href="#booking">Book Ticket</a>
+        <a href="booking.html">Book Ticket</a>
 
     </section>
-
 
     <!-- About IPL -->
     <section id="about">
@@ -81,7 +79,6 @@
         </ul>
 
     </section>
-
 
     <!-- Match Schedule -->
     <section id="matches">
@@ -124,7 +121,7 @@
                     <td>₹800</td>
                     <td>₹2000</td>
                     <td>₹5000</td>
-                    <td><a href="#booking">Book</a></td>
+                    <td><a href="booking.html">Book</a></td>
                 </tr>
 
                 <tr>
@@ -135,7 +132,7 @@
                     <td>₹1000</td>
                     <td>₹2500</td>
                     <td>₹6000</td>
-                    <td><a href="#booking">Book</a></td>
+                    <td><a href="booking.html">Book</a></td>
                 </tr>
 
                 <tr>
@@ -146,7 +143,7 @@
                     <td>₹900</td>
                     <td>₹2200</td>
                     <td>₹5500</td>
-                    <td><a href="#booking">Book</a></td>
+                    <td><a href="booking.html">Book</a></td>
                 </tr>
 
             </tbody>
@@ -154,82 +151,6 @@
         </table>
 
     </section>
-
-
-    <!-- Ticket Booking Form -->
-    <section id="booking">
-
-        <h2>Book Your IPL Ticket</h2>
-
-        <form>
-
-            <label for="match">Select Match:</label>
-
-            <select id="match" name="match" required>
-                <option value="">Choose a Match</option>
-                <option value="1">CSK vs MI</option>
-                <option value="2">RCB vs CSK</option>
-                <option value="3">MI vs RCB</option>
-            </select>
-
-            <br><br>
-
-            <label for="stand">Stand Category:</label>
-
-            <select id="stand" name="stand" required>
-                <option value="">Choose Category</option>
-                <option value="general">General</option>
-                <option value="premium">Premium</option>
-                <option value="vip">VIP</option>
-            </select>
-
-            <br><br>
-
-            <label for="quantity">Number of Tickets:</label>
-
-            <input type="number"
-                   id="quantity"
-                   name="quantity"
-                   min="1"
-                   max="10"
-                   required>
-
-            <br><br>
-
-            <label for="name">Full Name:</label>
-
-            <input type="text"
-                   id="name"
-                   name="name"
-                   required>
-
-            <br><br>
-
-            <label for="email">Email:</label>
-
-            <input type="email"
-                   id="email"
-                   name="email"
-                   required>
-
-            <br><br>
-
-            <label for="phone">Phone Number:</label>
-
-            <input type="tel"
-                   id="phone"
-                   name="phone"
-                   pattern="[0-9]{10}"
-                   required>
-
-            <br><br>
-
-            <button type="submit">Confirm Booking</button>
-
-        </form>
-
-    </section>
-
 
     <!-- Booking Summary -->
     <aside id="booking-summary">
@@ -247,7 +168,6 @@
         <h4>Total Amount: ₹800</h4>
 
     </aside>
-
 
     <!-- My Ticket Bookings -->
     <section id="my-bookings">
@@ -274,7 +194,6 @@
         <p>No bookings available yet.</p>
 
     </section>
-
 
     <!-- Guidelines -->
     <section id="guidelines">
@@ -310,7 +229,6 @@
 
     </section>
 
-
     <!-- Footer -->
     <footer>
 
@@ -324,4 +242,3 @@
 </body>
 
 </html>
-```

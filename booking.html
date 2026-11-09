@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Ticket Booking Form</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <h2>IPL 2026</h2>
+
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#matches">Matches</a></li>
+                <li><a href="booking.html">Book Ticket</a></li>
+                <li><a href="index.html#my-bookings">My Bookings</a></li>
+                <li><a href="index.html#guidelines">Guidelines</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Booking Form -->
+    <section id="booking">
+
+        <h1>IPL 2026 Ticket Booking</h1>
+
+        <p>Fill in your details to book your IPL match tickets.</p>
+
+        <form action="#" method="get">
+
+            <!-- Full Name -->
+            <label for="name">Full Name:</label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                minlength="3"
+                maxlength="30"
+                required
+            >
+
+            <br><br>
+
+            <!-- Email -->
+            <label for="email">Email Address:</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+            >
+
+            <br><br>
+
+            <!-- Phone Number -->
+            <label for="phone">Phone Number:</label>
+
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter 10-digit phone number"
+                pattern="[0-9]{10}"
+                title="Please enter a valid 10-digit phone number"
+                required
+            >
+
+            <br><br>
+
+            <!-- Match Selection -->
+            <label for="match">Select Match:</label>
+
+            <select id="match" name="match" required>
+
+                <option value="">Choose a Match</option>
+
+                <option value="1">CSK vs MI - Chennai</option>
+
+                <option value="2">RCB vs CSK - Bengaluru</option>
+
+                <option value="3">MI vs RCB - Mumbai</option>
+
+            </select>
+
+            <br><br>
+
+            <!-- Stand Category -->
+            <label for="stand">Select Stand Category:</label>
+
+            <select id="stand" name="stand" required>
+
+                <option value="">Choose Stand Category</option>
+
+                <option value="general">General - ₹800</option>
+
+                <option value="premium">Premium - ₹2000</option>
+
+                <option value="vip">VIP - ₹5000</option>
+
+            </select>
+
+            <br><br>
+
+            <!-- Number of Tickets -->
+            <label for="quantity">Number of Tickets:</label>
+
+            <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                min="1"
+                max="10"
+                required
+            >
+
+            <br><br>
+
+            <!-- Additional Preferences -->
+            <label>Additional Preference:</label>
+
+            <input
+                type="radio"
+                id="food"
+                name="preference"
+                value="food"
+            >
+
+            <label for="food">Food Package</label>
+
+            <br>
+
+            <input
+                type="radio"
+                id="regular"
+                name="preference"
+                value="regular"
+            >
+
+            <label for="regular">Regular Entry</label>
+
+            <br><br>
+
+            <!-- Buttons -->
+            <button type="submit">Confirm Booking</button>
+
+            <button type="reset">Reset Form</button>
+
+        </form>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            &copy; 2026 IPL Ticket Booking Website.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
