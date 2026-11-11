@@ -1,0 +1,301 @@
+
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f5f9;
+  color: #102746;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main Content */
+.main-content {
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+  padding: 30px;
+  flex: 1;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #0d203b;
+  color: white;
+  padding: 22px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h2 {
+  color: #ffb900;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(120deg, #142f55, #2057a8);
+  color: white;
+  text-align: center;
+  padding: 100px 30px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 45px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hero-buttons button {
+  background-color: #ffb900;
+  color: #102746;
+  border: none;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.hero-buttons button:hover {
+  background-color: #e6a600;
+}
+
+/* Match Section */
+.matches-section {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.matches-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #102746;
+}
+
+/* Match Cards */
+.matches-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.match-card {
+  background-color: white;
+  width: 300px;
+  padding: 30px 22px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.match-card:hover {
+  transform: translateY(-5px);
+}
+
+.match-card h3 {
+  color: #123d70;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.match-card p {
+  margin-bottom: 18px;
+  font-size: 15px;
+  color: #333;
+}
+
+.ticket-price {
+  color: #123d70 !important;
+}
+
+/* Book Button */
+.book-btn {
+  width: 100%;
+  background-color: #ffb900;
+  color: #102746;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.book-btn:hover {
+  background-color: #e6a600;
+}
+
+/* Footer */
+.footer {
+  background-color: #0d203b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .matches-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .match-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+/* Hero Buttons */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-buttons button {
+  background-color: #ffb900;
+  color: #102746;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Booking Section */
+.booking-section {
+  padding: 50px 20px;
+  text-align: center;
+  margin-top: 40px;
+  background-color: #e9eef6;
+  border-radius: 12px;
+}
+
+.booking-section h2 {
+  margin-bottom: 12px;
+}
+
+.booking-form {
+  max-width: 450px;
+  margin: 25px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.booking-form label {
+  font-weight: bold;
+}
+
+.booking-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #0d203b;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: toastFadeIn 0.3s ease;
+}
+
+@keyframes toastFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .toast {
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    text-align: center;
+  }
+
+  .booking-form {
+    padding: 20px;
+  }
+}
