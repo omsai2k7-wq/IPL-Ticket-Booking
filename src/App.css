@@ -6,10 +6,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #f3f5f9;
-  color: #102746;
+  background: #f5f3fa;
+  color: #201b3b;
 }
 
 .app {
@@ -23,22 +27,24 @@ body {
   width: 100%;
   max-width: 1300px;
   margin: auto;
-  padding: 30px;
+  padding: 35px;
   flex: 1;
 }
 
 /* Navbar */
 .navbar {
-  background-color: #0d203b;
+  background: linear-gradient(110deg, #111329, #292052, #443080);
   color: white;
   padding: 22px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 5px 20px rgba(25, 20, 60, 0.2);
 }
 
 .navbar h2 {
-  color: #ffb900;
+  color: #ffc857;
+  letter-spacing: 1px;
 }
 
 .nav-links {
@@ -51,85 +57,104 @@ body {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #ffc857;
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(120deg, #142f55, #2057a8);
+  background:
+    radial-gradient(circle at 85% 15%, rgba(116, 76, 220, 0.4), transparent 35%),
+    radial-gradient(circle at 10% 90%, rgba(39, 120, 232, 0.3), transparent 40%),
+    linear-gradient(125deg, #111329, #292052 60%, #443080);
   color: white;
   text-align: center;
-  padding: 100px 30px;
-  border-radius: 12px;
-  margin-bottom: 40px;
+  padding: 105px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  margin-bottom: 45px;
+  box-shadow: 0 12px 30px rgba(41, 32, 82, 0.2);
 }
 
 .hero h1 {
   font-size: 40px;
   margin-bottom: 20px;
+  color: #ffffff;
 }
 
 .hero p {
   font-size: 20px;
   margin-bottom: 45px;
+  color: #ded9f1;
 }
 
 .hero-buttons {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .hero-buttons button {
-  background-color: #ffb900;
-  color: #102746;
+  background: linear-gradient(135deg, #ffdc89, #ffc044);
+  color: #211a37;
   border: none;
-  padding: 16px 32px;
+  padding: 15px 28px;
   font-size: 16px;
   font-weight: bold;
-  border-radius: 7px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: all 0.25s ease;
 }
 
 .hero-buttons button:hover {
-  background-color: #e6a600;
+  background: #ffe5a6;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(255, 192, 68, 0.25);
 }
 
 /* Match Section */
 .matches-section {
   text-align: center;
-  padding: 30px 0;
+  padding: 35px 0;
 }
 
 .matches-section h2 {
-  font-size: 28px;
-  margin-bottom: 30px;
-  color: #102746;
+  font-size: 29px;
+  margin-bottom: 32px;
+  color: #292052;
 }
 
 /* Match Cards */
 .matches-container {
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 28px;
   flex-wrap: wrap;
 }
 
 .match-card {
-  background-color: white;
+  background: linear-gradient(145deg, #ffffff, #f9f7ff);
   width: 300px;
-  padding: 30px 22px;
-  border-radius: 12px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  padding: 32px 24px;
+  border: 1px solid #e7e0f5;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(42, 31, 89, 0.08);
   text-align: left;
-  transition: transform 0.3s;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .match-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 26px rgba(73, 49, 142, 0.16);
+  border-color: #d2c4f2;
 }
 
 .match-card h3 {
-  color: #123d70;
+  color: #5636b8;
   font-size: 22px;
   text-align: center;
   margin-bottom: 25px;
@@ -138,91 +163,33 @@ body {
 .match-card p {
   margin-bottom: 18px;
   font-size: 15px;
-  color: #333;
+  color: #55516a;
+  line-height: 1.5;
 }
 
 .ticket-price {
-  color: #123d70 !important;
+  color: #443080 !important;
+  font-weight: 600;
 }
 
 /* Book Button */
 .book-btn {
   width: 100%;
-  background-color: #ffb900;
-  color: #102746;
+  background: linear-gradient(135deg, #ffdc89, #ffc044);
+  color: #211a37;
   border: none;
-  padding: 12px;
+  padding: 13px;
   font-size: 16px;
   font-weight: bold;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: all 0.25s ease;
 }
 
 .book-btn:hover {
-  background-color: #e6a600;
-}
-
-/* Footer */
-.footer {
-  background-color: #0d203b;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 30px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .nav-links {
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .hero {
-    padding: 60px 20px;
-  }
-
-  .hero h1 {
-    font-size: 28px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .matches-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .match-card {
-    width: 100%;
-    max-width: 350px;
-  }
-}
-
-/* Hero Buttons */
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.hero-buttons button {
-  background-color: #ffb900;
-  color: #102746;
-  border: none;
-  padding: 14px 25px;
-  border-radius: 7px;
-  font-weight: bold;
-  cursor: pointer;
+  background: #ffe5a6;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(255, 192, 68, 0.25);
 }
 
 /* Booking Section */
@@ -230,20 +197,25 @@ body {
   padding: 50px 20px;
   text-align: center;
   margin-top: 40px;
-  background-color: #e9eef6;
-  border-radius: 12px;
+  background: linear-gradient(130deg, #ecebfa, #f5efff);
+  border: 1px solid #e5def6;
+  border-radius: 16px;
 }
 
 .booking-section h2 {
   margin-bottom: 12px;
+  font-size: 28px;
+  color: #292052;
 }
 
 .booking-form {
   max-width: 450px;
-  margin: 25px auto;
-  padding: 30px;
-  background: white;
-  border-radius: 12px;
+  margin: 28px auto;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #e7e0f5;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(42, 31, 89, 0.09);
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -252,13 +224,21 @@ body {
 
 .booking-form label {
   font-weight: bold;
+  color: #292052;
 }
 
 .booking-form input {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  padding: 13px;
+  border: 1px solid #dcd5eb;
+  border-radius: 7px;
   font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.booking-form input:focus {
+  border-color: #7549d6;
+  box-shadow: 0 0 0 3px rgba(117, 73, 214, 0.13);
 }
 
 /* Toast Notification */
@@ -266,12 +246,13 @@ body {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: #0d203b;
+  background: linear-gradient(110deg, #292052, #5636b8);
   color: white;
   padding: 16px 24px;
-  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 9px;
   z-index: 9999;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 18px rgba(42, 31, 89, 0.25);
   animation: toastFadeIn 0.3s ease;
 }
 
@@ -287,6 +268,57 @@ body {
   }
 }
 
+/* Footer */
+.footer {
+  background: linear-gradient(110deg, #111329, #292052, #443080);
+  color: #e6e2f3;
+  text-align: center;
+  padding: 22px;
+  margin-top: 35px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 20px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 22px 20px;
+  }
+
+  .nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 65px 20px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .matches-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .match-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
 @media (max-width: 600px) {
   .toast {
     left: 15px;
@@ -296,6 +328,6 @@ body {
   }
 
   .booking-form {
-    padding: 20px;
+    padding: 22px;
   }
 }
